@@ -19,14 +19,14 @@ let apiRoutes = require("./api-routes");
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-app.use(bodyParser.json)
+app.use(bodyParser.json())
 
 //connect to mongoose and set connection variable
-mongoose.connect('mongoose://localhost/teebo', {
+mongoose.connect('mongodb://localhost/teebo', {
 useNewUrlParser: true});
 var db = mongoose.connection;
 
-//aded check for db connection
+//added check for db connection
 if(!db){
   console.log("Error connecting to db");
 } else {
@@ -44,5 +44,5 @@ app.use('/api', apiRoutes);
 
 //Launch app to listen to specified port
 app.listen(port, function () {
-  console.log("Running pycp on port " + port);
+  console.log("Running teebo on port " + port);
 });

@@ -3,8 +3,9 @@ const mongoose = require('mongoose');
 const itemSchema = mongoose.Schema({
 
   itemName: String,
+  itemBrand: String,
   itemCategory: String,
-  itemPrice: Double,
+  itemPrice: String,
   itemSold: Boolean,
   itemSize: String
 

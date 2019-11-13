@@ -6,14 +6,23 @@ let router = require('express').Router();
 router.get('/', function (req, res) {
   res.json({
     status: 'API its working',
-    message: 'Welcome to PYCP!',
+    message: 'Welcome to teebo!',
   });
 });
 
 //Import Controller
-let itemController = require('./controllers/itemController');
+var itemController = require('./controllers/itemController');
 
-//Activity apiRoutes
+//Item apiRoutes
 router.route('/items')
   .get(itemController.index)
   .post(itemController.new);
+
+router.route('/items/:item_id')
+ .get(itemController.view)
+ .patch(itemController.update)
+ .put(itemController.update)
+ .delete(itemController.delete);
+
+//export API routes
+module.exports = router;
