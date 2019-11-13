@@ -13,7 +13,7 @@ router.get('/', function (req, res) {
 //Import Controller
 var itemController = require('./controllers/itemController');
 
-//Item apiRoutes
+//Item Routes
 router.route('/items')
   .get(itemController.index)
   .post(itemController.new);
