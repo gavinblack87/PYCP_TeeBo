@@ -18,3 +18,17 @@ exports.index = function (req, res) {
     });
   });
 };
+
+//handle view item info
+exports.view = function (req, res) {
+  Item.findById(req.params.item_id,
+    function (err, item) {
+      if (err)
+        res.send(err);
+      res.json({
+        message: 'Activity details loading..',
+        data: activity
+      })
+    }
+  )
+}
