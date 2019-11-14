@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import HeaderComponent from '../components/home/HeaderComponent';
+import DatesComponent from '../components/home/DatesComponent';
 
 export default class HomePageContainer extends Component {
 
@@ -14,6 +15,7 @@ export default class HomePageContainer extends Component {
         return (
             <>
                 <HeaderComponent />
+                <DatesComponent eventDates={this.state.eventDates} />
                 <h1>HomePageContainer</h1>
             </>
         )
