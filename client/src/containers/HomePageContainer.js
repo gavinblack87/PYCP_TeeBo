@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import HeaderComponent from '../components/home/HeaderComponent';
 
 export default class HomePageContainer extends Component {
 
@@ -12,6 +13,7 @@ export default class HomePageContainer extends Component {
     render() {
         return (
             <>
+                <HeaderComponent />
                 <h1>HomePageContainer</h1>
             </>
         )
