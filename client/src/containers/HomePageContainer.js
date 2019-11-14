@@ -5,7 +5,8 @@ export default class HomePageContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            items: []
+            items: [], 
+            eventDates: []
         }
     }
     render() {
