@@ -8,7 +8,7 @@ export default class HomePageContainer extends Component {
         super(props);
         this.state = {
             items: [], 
-            eventDates: []
+            eventDates: ['2019/10/28', '2019/12/28', '2020/06/18', '2020/07/08']
         }
     }
     render() {
