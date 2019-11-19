@@ -1,0 +1,18 @@
+.dates-component {
+    background-color: #114B70;
+}
+.dates-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.date {
+    color: white;
+    padding: 0 25px;
+}
+
+.date-heading {
+    color: white;  
+    text-align: center;
+}

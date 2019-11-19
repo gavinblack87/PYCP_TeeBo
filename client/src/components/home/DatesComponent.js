@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Moment from 'react-moment';
+import '../../styling/components/home/DatesComponent.css'
 
 export default class DateComponent extends Component {
     constructor(props) {
@@ -11,12 +12,14 @@ export default class DateComponent extends Component {
 
     render() {
         return(
-          <>
-            <h2>Future Dates:</h2>
-            {this.state.futureDates.map((date, index) => {
-              return<h3><Moment key={index} format="Do MMMM YYYY">{date}</Moment></h3>
-            })}
-          </>
+          <div className="dates-component">
+              <h2 className="date-heading">Future Dates:</h2>
+                <div className="dates-container">
+                {this.state.futureDates.map((date, index) => {
+                  return<h3 className="date"><Moment key={index} format="Do MMMM YYYY">{date}</Moment></h3>
+                })}
+                </div>
+          </div>
         );
       }
     }
