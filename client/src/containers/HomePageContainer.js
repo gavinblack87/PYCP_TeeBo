@@ -15,8 +15,8 @@ export default class HomePageContainer extends Component {
         return (
             <>
                 <HeaderComponent />
-                <DatesComponent eventDates={this.state.eventDates} />
                 <h1>HomePageContainer</h1>
+                <DatesComponent eventDates={this.state.eventDates} />
             </>
         )
     }
