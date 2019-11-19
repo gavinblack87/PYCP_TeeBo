@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Moment from 'react-moment';
 
 export default class DateComponent extends Component {
     constructor(props) {
@@ -11,8 +12,10 @@ export default class DateComponent extends Component {
     render() {
         return(
           <>
-            <h2>DatesComponent</h2>
-            <h3>{this.state.futureDates}</h3>
+            <h2>Future Dates:</h2>
+            {this.state.futureDates.map((date, index) => {
+              return<h3><Moment key={index} format="Do MMMM YYYY">{date}</Moment></h3>
+            })}
           </>
         );
       }
