@@ -12,14 +12,18 @@ export default class DateComponent extends Component {
 
     render() {
         return(
-          <div className="dates-component">
+          <>
+          <hr />
+            <div className="dates-component">
               <h2 className="date-heading">Future Dates:</h2>
                 <div className="dates-container">
                 {this.state.futureDates.map((date, index) => {
                   return<h3 className="date"><Moment key={index} format="Do MMMM YYYY">{date}</Moment></h3>
                 })}
                 </div>
-          </div>
+            </div>
+          <hr />
+          </>
         );
       }
     }
