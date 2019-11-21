@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Moment from 'react-moment';
 import '../../styling/components/home/DatesComponent.css'
+import ItemLoginComponent from './ItemLoginComponent';
 
 export default class DateComponent extends Component {
     constructor(props) {
@@ -21,6 +22,7 @@ export default class DateComponent extends Component {
                   return<h3 className="date"><Moment key={index} format="Do MMMM YYYY">{date}</Moment></h3>
                 })}
                 </div>
+                <ItemLoginComponent />
             </div>
           <hr />
           </>
